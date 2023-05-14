@@ -169,7 +169,7 @@ export class <%= convertKebabCaseToPascal(key) %> {
   constructor(private readonly client: OkxAxiosInstance) {}
 
   <%_ functions.forEach((func) => { _%>
-  /*!
+  /**
    * **<%= func.title %>**
    * 
     <%_ if (func.description) { _%>

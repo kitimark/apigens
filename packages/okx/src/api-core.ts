@@ -22,7 +22,7 @@ import {
 export class Trade {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Place order**
    * 
    * You can place an order only if you have sufficient funds.
@@ -35,7 +35,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Place multiple orders**
    * 
    * Place orders in batches. Maximum 20 orders can be placed per request. Request parameters should be passed in the form of an array.
@@ -48,7 +48,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel order**
    * 
    * Cancel an incomplete order.
@@ -60,7 +60,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel multiple orders**
    * 
    * Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.
@@ -72,7 +72,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend order**
    * 
    * Amend an incomplete order.
@@ -84,7 +84,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend multiple orders**
    * 
    * Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.
@@ -96,7 +96,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Close positions**
    * 
    * Close the position of an instrument via a market order.
@@ -108,7 +108,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order details**
    * 
    * Retrieve order details.
@@ -121,7 +121,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order List**
    * 
    * Retrieve all incomplete orders under the current account.
@@ -134,7 +134,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order history (last 7 days)**
    * 
    * Retrieve the completed order data for the last 7 days, including those placed 7 days ago but completed for the last 7 days.
@@ -148,7 +148,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order history (last 3 months)**
    * 
    * Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed for the last 3 months.
@@ -161,7 +161,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get transaction details (last 3 days）**
    * 
    * Retrieve recently-filled transaction details in the last 3 day.
@@ -174,7 +174,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get transaction details (last 3 months)**
    * 
    * Retrieve recently-filled transaction details in the last 3 months.
@@ -187,7 +187,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Place algo order**
    * 
    * The algo order includes `trigger` order, `oco` order, `conditional` order,`iceberg` order, `twap` order and trailing order.
@@ -199,7 +199,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel algo order**
    * 
    * Cancel unfilled algo orders (not including Iceberg order, TWAP order, Trailing Stop order). A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.
@@ -211,7 +211,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend algo order**
    * 
    * Amend unfilled algo orders (Support stop order only,not including Move_order_stop order, Trigger order, Iceberg order, TWAP order, Trailing Stop order).
@@ -224,7 +224,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel advance algo order**
    * 
    * Cancel unfilled algo orders (including Iceberg order, TWAP order, Trailing Stop order). A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.
@@ -236,7 +236,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get algo order details**
    * 
    * 
@@ -248,7 +248,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get algo order list**
    * 
    * Retrieve a list of untriggered Algo orders under the current account.
@@ -261,7 +261,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get algo order history**
    * 
    * Retrieve a list of all algo orders under the current account in the last 3 months.
@@ -274,7 +274,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get easy convert currency list**
    * 
    * Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.
@@ -287,7 +287,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Place easy convert**
    * 
    * Convert small currencies to mainstream currencies. Only applicable to the crypto balance less than $10.
@@ -299,7 +299,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get easy convert history**
    * 
    * Get the history and status of easy convert trades.
@@ -312,7 +312,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get one-click repay currency list**
    * 
    * Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts.
@@ -325,7 +325,7 @@ export class Trade {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Trade one-click repay**
    * 
    * Trade one-click repay to repay cross debts. Isolated debts are not applicable. The maximum repayment amount is based on the remaining available balance of funding and trading accounts.
@@ -337,7 +337,7 @@ export class Trade {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get one-click repay history**
    * 
    * Get the history and status of one-click repay trades.
@@ -354,7 +354,7 @@ export class Trade {
 export class Funding {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get currencies**
    * 
    * Retrieve a list of all currencies.
@@ -367,7 +367,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get balance**
    * 
    * Retrieve the funding account balances of all the assets and the amount that is available or on hold.
@@ -380,7 +380,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get non-tradable assets**
    * 
    * 
@@ -392,7 +392,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get account asset valuation**
    * 
    * View account asset valuation
@@ -405,7 +405,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Funds transfer**
    * 
    * Only API keys with `Trade` privilege can call this endpoint.
@@ -417,7 +417,7 @@ export class Funding {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get funds transfer state**
    * 
    * Retrieve the transfer state data of the last 2 weeks.
@@ -430,7 +430,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Asset bills details**
    * 
    * Query the billing record. You can get the latest 1 month historical data.
@@ -443,7 +443,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Lightning deposits**
    * 
    * Users can create up to 10,000 different invoices within 24 hours.
@@ -456,7 +456,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get deposit address**
    * 
    * Retrieve the deposit addresses of currencies, including previously-used addresses.
@@ -469,7 +469,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get deposit history**
    * 
    * Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.
@@ -482,7 +482,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Withdrawal**
    * 
    * Withdrawal of tokens. Common sub-account does not support withdrawal.
@@ -494,7 +494,7 @@ export class Funding {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Lightning withdrawals**
    * 
    * The maximum withdrawal amount is 0.1 BTC per request, and 1 BTC in 24 hours. The minimum withdrawal amount is approximately 0.000001 BTC. Sub-account does not support withdrawal.
@@ -506,7 +506,7 @@ export class Funding {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel withdrawal**
    * 
    * You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.
@@ -518,7 +518,7 @@ export class Funding {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get withdrawal history**
    * 
    * Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.
@@ -531,7 +531,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get deposit withdraw status**
    * 
    * Retrieve deposit&#39;s and withdrawal&#39;s detailed status and estimated complete time.
@@ -544,7 +544,7 @@ export class Funding {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Small assets convert**
    * 
    * Convert small assets in funding account to `OKB`. Only 5 convert is allowed within 24 hours.
@@ -560,7 +560,7 @@ export class Funding {
 export class Convert {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get convert currencies**
    * 
    * 
@@ -572,7 +572,7 @@ export class Convert {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get convert currency pair**
    * 
    * 
@@ -584,7 +584,7 @@ export class Convert {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Estimate quote**
    * 
    * 
@@ -595,7 +595,7 @@ export class Convert {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Convert trade**
    * 
    * 
@@ -606,7 +606,7 @@ export class Convert {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get convert history**
    * 
    * 
@@ -622,7 +622,7 @@ export class Convert {
 export class Account {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get balance**
    * 
    * Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.
@@ -635,7 +635,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get positions**
    * 
    * Retrieve information on your positions. When the account is in `net` mode, `net` positions will be displayed, and when the account is in `long/short` mode, `long` or `short` positions will be displayed. Return in reverse chronological order using ctime.
@@ -648,7 +648,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get positions history**
    * 
    * Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.
@@ -661,7 +661,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get account and position risk**
    * 
    * Get account and position risk
@@ -674,7 +674,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get bills details (last 7 days)**
    * 
    * Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.
@@ -687,7 +687,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get bills details (last 3 months)**
    * 
    * Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 3 months.
@@ -700,7 +700,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get account configuration**
    * 
    * Retrieve current account configuration.
@@ -713,7 +713,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set position mode**
    * 
    * Single-currency mode and Multi-currency mode: `FUTURES` and `SWAP` support both `long/short` mode and `net` mode. In `net` mode, users can only have positions in one direction; In `long/short` mode, users can hold positions in long and short directions.
@@ -726,7 +726,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set leverage**
    * 
    * There are 9 different scenarios for leverage setting:
@@ -748,7 +748,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get maximum buy/sell amount or open amount**
    * 
    * 
@@ -760,7 +760,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get maximum available tradable amount**
    * 
    * 
@@ -772,7 +772,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Increase/decrease margin**
    * 
    * Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.
@@ -784,7 +784,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get leverage**
    * 
    * 
@@ -796,7 +796,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get the maximum loan of instrument**
    * 
    * 
@@ -808,7 +808,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get fee rates**
    * 
    * 
@@ -820,7 +820,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get interest accrued data**
    * 
    * 
@@ -832,7 +832,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get interest rate**
    * 
    * Get the user&#39;s current leveraged currency borrowing interest rate
@@ -845,7 +845,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set greeks (PA/BS)**
    * 
    * Set the display type of Greeks.
@@ -857,7 +857,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Isolated margin trading settings**
    * 
    * You can set the currency margin and futures/perpetual Isolated margin trading mode
@@ -869,7 +869,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get maximum withdrawals**
    * 
    * Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.
@@ -882,7 +882,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get account risk state**
    * 
    * Only applicable to Portfolio margin account
@@ -895,7 +895,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Manual borrow and repay in Quick Margin Mode**
    * 
    * 
@@ -906,7 +906,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get borrow and repay history in Quick Margin Mode**
    * 
    * 
@@ -918,7 +918,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **VIP loans borrow and repay**
    * 
    * Maximum number of borrowing orders for a single currency is 20
@@ -930,7 +930,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get borrow and repay history for VIP loans**
    * 
    * 
@@ -942,7 +942,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get VIP interest accrued data**
    * 
    * 
@@ -954,7 +954,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get VIP interest deducted data**
    * 
    * 
@@ -966,7 +966,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get VIP loan order list**
    * 
    * 
@@ -978,7 +978,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get VIP loan order detail**
    * 
    * 
@@ -990,7 +990,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get borrow interest and limit**
    * 
    * 
@@ -1002,7 +1002,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Position builder**
    * 
    * Calculates portfolio margin information for simulated position or current position of the user.
@@ -1015,7 +1015,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get Greeks**
    * 
    * Retrieve a greeks list of all assets in the account.
@@ -1028,7 +1028,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get PM position limitation**
    * 
    * Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.
@@ -1041,7 +1041,7 @@ export class Account {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set risk offset type**
    * 
    * Configure the risk offset type in portfolio margin mode.
@@ -1053,7 +1053,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Activate option**
    * 
    * 
@@ -1064,7 +1064,7 @@ export class Account {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set auto loan**
    * 
    * Only applicalbe to `Multi-currency margin` and `Portfolio margin`
@@ -1080,7 +1080,7 @@ export class Account {
 export class Subaccount {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **View sub-account list**
    * 
    * Applies to master accounts only
@@ -1093,7 +1093,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Reset the API Key of a sub-account**
    * 
    * Applies to master accounts only and master accounts API Key must be linked to IP addresses.
@@ -1105,7 +1105,7 @@ export class Subaccount {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get sub-account trading balance**
    * 
    * Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)
@@ -1118,7 +1118,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get sub-account funding balance**
    * 
    * Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)
@@ -1131,7 +1131,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **History of sub-account transfer**
    * 
    * Applies to master accounts only.
@@ -1145,7 +1145,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Master accounts manage the transfers between sub-accounts**
    * 
    * Applies to master accounts only.
@@ -1157,7 +1157,7 @@ export class Subaccount {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set Permission Of Transfer Out**
    * 
    * Set permission of transfer out for sub-account (only applicable to master account). Sub-account can transfer out to master account by default.
@@ -1169,7 +1169,7 @@ export class Subaccount {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get custody trading sub-account list**
    * 
    * The trading team uses this interface to view the list of sub-accounts currently under escrow
@@ -1182,7 +1182,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get the user&#39;s affiliate rebate information**
    * 
    * This endpoint is used to get the user&#39;s affiliate rebate information for affiliate.
@@ -1195,7 +1195,7 @@ export class Subaccount {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set sub-accounts VIP loan%**
    * 
    * Set the VIP loan allocation of sub-accounts. Only Applicable to master account API keys with Trade access.
@@ -1207,7 +1207,7 @@ export class Subaccount {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get sub-account borrow interest and limit**
    * 
    * Only applicable to master account API keys. Only return VIP loan information
@@ -1224,7 +1224,7 @@ export class Subaccount {
 export class GridTrading {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Place grid algo order**
    * 
    * 
@@ -1235,7 +1235,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend grid algo order**
    * 
    * Supported contract grid algo order amendment.
@@ -1247,7 +1247,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Stop grid algo order**
    * 
    * A maximum of 10 orders can be stopped per request.
@@ -1259,7 +1259,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Close position for contract grid**
    * 
    * Close position when the contract grid stop type is &#39;keep position&#39;.
@@ -1271,7 +1271,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel close position order for contract grid**
    * 
    * 
@@ -1282,7 +1282,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Instant trigger grid algo order**
    * 
    * 
@@ -1293,7 +1293,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid algo order list**
    * 
    * 
@@ -1305,7 +1305,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid algo order history**
    * 
    * 
@@ -1317,7 +1317,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid algo order details**
    * 
    * 
@@ -1329,7 +1329,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid algo sub orders**
    * 
    * 
@@ -1341,7 +1341,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid algo order positions**
    * 
    * 
@@ -1353,7 +1353,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Spot/Moon grid withdraw income**
    * 
    * 
@@ -1364,7 +1364,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Compute margin balance**
    * 
    * 
@@ -1375,7 +1375,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Adjust margin balance**
    * 
    * 
@@ -1386,7 +1386,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get grid AI parameter (public)**
    * 
    * Authentication is not required for this public endpoint.
@@ -1399,7 +1399,7 @@ export class GridTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Compute min investment (public)**
    * 
    * Authentication is not required for this public endpoint.
@@ -1411,7 +1411,7 @@ export class GridTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **RSI back testing (public)**
    * 
    * Authentication is not required for this public endpoint.
@@ -1428,7 +1428,7 @@ export class GridTrading {
 export class RecurringBuy {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Place recurring buy order**
    * 
    * 
@@ -1439,7 +1439,7 @@ export class RecurringBuy {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend recurring buy order**
    * 
    * 
@@ -1450,7 +1450,7 @@ export class RecurringBuy {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Stop recurring buy order**
    * 
    * A maximum of 10 orders can be stopped per request.
@@ -1462,7 +1462,7 @@ export class RecurringBuy {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get recurring buy order list**
    * 
    * 
@@ -1474,7 +1474,7 @@ export class RecurringBuy {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get recurring buy order history**
    * 
    * 
@@ -1486,7 +1486,7 @@ export class RecurringBuy {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get recurring buy order details**
    * 
    * 
@@ -1498,7 +1498,7 @@ export class RecurringBuy {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get recurring buy sub orders**
    * 
    * 
@@ -1514,7 +1514,7 @@ export class RecurringBuy {
 export class Savings {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get saving balance**
    * 
    * 
@@ -1526,7 +1526,7 @@ export class Savings {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Savings purchase/redemption**
    * 
    * Only the assets in the funding account can be used for saving.
@@ -1538,7 +1538,7 @@ export class Savings {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Set lending rate**
    * 
    * 
@@ -1549,7 +1549,7 @@ export class Savings {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get lending history**
    * 
    * 
@@ -1561,7 +1561,7 @@ export class Savings {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get public borrow info (public)**
    * 
    * Authentication is not required for this public endpoint.
@@ -1574,7 +1574,7 @@ export class Savings {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get public borrow history (public)**
    * 
    * Authentication is not required for this public endpoint.
@@ -1591,7 +1591,7 @@ export class Savings {
 export class Earn {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get offers**
    * 
    * 
@@ -1603,7 +1603,7 @@ export class Earn {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Purchase**
    * 
    * 
@@ -1614,7 +1614,7 @@ export class Earn {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Redeem**
    * 
    * 
@@ -1625,7 +1625,7 @@ export class Earn {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Cancel purchases/redemptions**
    * 
    * 
@@ -1636,7 +1636,7 @@ export class Earn {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get active orders**
    * 
    * 
@@ -1648,7 +1648,7 @@ export class Earn {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order history**
    * 
    * 
@@ -1664,7 +1664,7 @@ export class Earn {
 export class CopyTrading {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get existing leading positions**
    * 
    * The leading trader gets leading positions that are not closed.
@@ -1677,7 +1677,7 @@ export class CopyTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get leading position history**
    * 
    * The leading trader retrieves the completed leading position of the last 3 months.
@@ -1691,7 +1691,7 @@ export class CopyTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Place leading stop order**
    * 
    * The leading trader sets TP/SL for the current leading position that are not closed.
@@ -1703,7 +1703,7 @@ export class CopyTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Close leading position**
    * 
    * The leading trader can only close a leading position once a time.
@@ -1716,7 +1716,7 @@ export class CopyTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get leading instruments**
    * 
    * The leading trader gets contracts that are supported to lead by the platform.
@@ -1729,7 +1729,7 @@ export class CopyTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Amend leading instruments**
    * 
    * The leading trder can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.
@@ -1742,7 +1742,7 @@ export class CopyTrading {
       .then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get profit sharing details**
    * 
    * The leading trader gets all profits shared details since joining the platform.
@@ -1755,7 +1755,7 @@ export class CopyTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get total profit sharing**
    * 
    * The leading trader gets the total amount of profit shared since joining the platform.
@@ -1768,7 +1768,7 @@ export class CopyTrading {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get unrealized profit sharing details**
    * 
    * The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.
@@ -1786,7 +1786,7 @@ export class CopyTrading {
 export class MarketData {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get tickers**
    * 
    * Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.
@@ -1799,7 +1799,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get ticker**
    * 
    * Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.
@@ -1812,7 +1812,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get index tickers**
    * 
    * Retrieve index tickers.
@@ -1825,7 +1825,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order book**
    * 
    * Retrieve order book of the instrument.
@@ -1838,7 +1838,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get order lite book**
    * 
    * Retrieve order top 25 book of the instrument more quickly
@@ -1851,7 +1851,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get candlesticks**
    * 
    * Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
@@ -1864,7 +1864,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get candlesticks history**
    * 
    * Retrieve history candlestick charts from recent years.
@@ -1877,7 +1877,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get index candlesticks**
    * 
    * Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
@@ -1890,7 +1890,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get index candlesticks history**
    * 
    * Retrieve the candlestick charts of the index from recent years.
@@ -1903,7 +1903,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get mark price candlesticks**
    * 
    * Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
@@ -1916,7 +1916,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get mark price candlesticks history**
    * 
    * Retrieve the candlestick charts of mark price from recent years.
@@ -1929,7 +1929,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get trades**
    * 
    * Retrieve the recent transactions of an instrument.
@@ -1942,7 +1942,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get trades history**
    * 
    * Retrieve the recent transactions of an instrument from the last 3 months with pagination.
@@ -1955,7 +1955,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get option trades**
    * 
    * Retrieve the recent transactions of an instrument under same instFamily. The maximum is 100.
@@ -1968,7 +1968,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get 24H total volume**
    * 
    * The 24-hour trading volume is calculated on a rolling basis.
@@ -1981,7 +1981,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get oracle**
    * 
    * Get the crypto price of signing using Open Oracle smart contract.
@@ -1994,7 +1994,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get exchange rate**
    * 
    * This interface provides the average exchange rate data for 2 weeks
@@ -2007,7 +2007,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get index components**
    * 
    * Get the index component information data on the market
@@ -2020,7 +2020,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get block tickers**
    * 
    * Retrieve the latest block trading volume in the last 24 hours.
@@ -2033,7 +2033,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get block ticker**
    * 
    * Retrieve the latest block trading volume in the last 24 hours.
@@ -2046,7 +2046,7 @@ export class MarketData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get block trades**
    * 
    * Retrieve the recent block trading transactions of an instrument. Descending order by tradeId.
@@ -2063,7 +2063,7 @@ export class MarketData {
 export class PublicData {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get instruments**
    * 
    * Retrieve a list of instruments with open contracts.
@@ -2076,7 +2076,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get delivery/exercise history**
    * 
    * Retrieve delivery records of Futures and exercise records of Options in the last 3 months.
@@ -2089,7 +2089,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get open interest**
    * 
    * Retrieve the total open interest for contracts on OKX.
@@ -2102,7 +2102,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get funding rate**
    * 
    * Retrieve funding rate.
@@ -2115,7 +2115,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get funding rate history**
    * 
    * Retrieve funding rate history. This endpoint can retrieve data from the last 3 months.
@@ -2128,7 +2128,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get limit price**
    * 
    * Retrieve the highest buy limit and lowest sell limit of the instrument.
@@ -2141,7 +2141,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get option market data**
    * 
    * Retrieve option market data.
@@ -2154,7 +2154,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get estimated delivery/exercise price**
    * 
    * Retrieve the estimated delivery price which will only have a return value one hour before the delivery/exercise.
@@ -2167,7 +2167,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get discount rate and interest-free quota**
    * 
    * Retrieve discount rate level and interest-free quota.
@@ -2180,7 +2180,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get system time**
    * 
    * Retrieve API server time.
@@ -2193,7 +2193,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get mark price**
    * 
    * Retrieve mark price.
@@ -2206,7 +2206,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get position tiers**
    * 
    * Retrieve position tiers information, maximum leverage depends on your borrowings and margin ratio.
@@ -2219,7 +2219,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get interest rate and loan quota**
    * 
    * Retrieve interest rate
@@ -2232,7 +2232,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get interest rate and loan quota for VIP loans**
    * 
    * 
@@ -2244,7 +2244,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get underlying**
    * 
    * 
@@ -2256,7 +2256,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get insurance fund**
    * 
    * Get insurance fund balance information
@@ -2269,7 +2269,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Unit convert**
    * 
    * Convert the crypto value to the number of contracts, or vice versa
@@ -2282,7 +2282,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get option trades**
    * 
    * The maximum is 100.
@@ -2295,7 +2295,7 @@ export class PublicData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get option tickBands**
    * 
    * Get option tickBands information
@@ -2312,7 +2312,7 @@ export class PublicData {
 export class TradingData {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Get support coin**
    * 
    * Retrieve the currencies supported by the trading data endpoints.
@@ -2325,7 +2325,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get taker volume**
    * 
    * Retrieve the taker volume for both buyers and sellers.
@@ -2338,7 +2338,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get margin lending ratio**
    * 
    * Retrieve the ratio of cumulative amount between currency margin quote currency and base currency.
@@ -2351,7 +2351,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get long/short ratio**
    * 
    * Retrieve the ratio of users with net long vs net short positions for futures and perpetual swaps.
@@ -2364,7 +2364,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get contracts open interest and volume**
    * 
    * Retrieve the open interest and trading volume for futures and perpetual swaps.
@@ -2377,7 +2377,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get options open interest and volume**
    * 
    * Retrieve the open interest and trading volume for options.
@@ -2390,7 +2390,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get put/call ratio**
    * 
    * Retrieve the open interest ratio and trading volume ratio of calls vs puts.
@@ -2403,7 +2403,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get open interest and volume (expiry)**
    * 
    * Retrieve the open interest and trading volume of calls and puts for each upcoming expiration.
@@ -2416,7 +2416,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get open interest and volume (strike)**
    * 
    * Retrieve the taker volume for both buyers and sellers of calls and puts.
@@ -2429,7 +2429,7 @@ export class TradingData {
     }).then(res => res.data);
   }
 
-  /*!
+  /**
    * **Get taker flow**
    * 
    * This shows the relative buy/sell volume for calls and puts. It shows whether traders are bullish or bearish on price and volatility.
@@ -2446,7 +2446,7 @@ export class TradingData {
 export class Status {
   constructor(private readonly client: OkxAxiosInstance) {}
 
-  /*!
+  /**
    * **Status**
    * 
    * Get event status of system upgrade
