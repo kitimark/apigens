@@ -1,13 +1,29 @@
 {
   "name": "@apigens/okx",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "private": false,
+  "author": "kitimark",
+  "description": "OKX API node.js SDK with generated code with OKX API documentation",
   "main": "lib/index.js",
+  "keywords": [
+    "api",
+    "okx",
+    "okx-api"
+  ],
   "types": "./lib/index.d.ts",
   "files": [
     "lib/",
     "package.json",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitimark/apigens.git",
+    "directory": "packages/okx"
+  },
+  "bugs": {
+    "url": "https://github.com/kitimark/apigens/issues"
+  },
   "license": "MIT",
   "scripts": {
     "build": "yarn tsc",
