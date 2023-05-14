@@ -5,7 +5,8 @@
   "types": "./lib/index.d.ts",
   "files": [
     "lib/",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
   "license": "MIT",
   "scripts": {
