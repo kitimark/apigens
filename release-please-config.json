@@ -1,4 +1,5 @@
 {
+  "bootstrap-sha": "",
   "packages": {
     "packages/okx": {
       "changelog-path": "CHANGELOG.md",
