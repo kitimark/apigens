@@ -1,6 +1,6 @@
 {
   "name": "@apigens/okx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "author": "kitimark",
   "description": "OKX API node.js SDK with generated code with OKX API documentation",
