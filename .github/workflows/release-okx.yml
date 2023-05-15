@@ -1,0 +1,46 @@
+name: release @apigens/okx
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/okx/**
+      - .github/workflows/release-please.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+defaults:
+  run:
+    working-directory: ./packages/okx
+ 
+jobs:
+  release:
+    name: release-please @apigens/okx
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          path: packages/okx
+          monorepo-tags: true
+          package-name: '@apigens/okx'
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn --frozen-lockfile
+        if: ${{ steps.release.outputs.release_created }}
+      - run: yarn build
+        if: ${{ steps.release.outputs.release_created }}
+      - id: publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
