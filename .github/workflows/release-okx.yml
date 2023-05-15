@@ -8,10 +8,6 @@ on:
       - packages/okx/**
       - .github/workflows/release-okx.yml
 
-permissions:
-  contents: write
-  pull-requests: write
-
 defaults:
   run:
     working-directory: ./packages/okx
