@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - packages/okx/**
-      - .github/workflows/release-please.yml
+      - .github/workflows/release-okx.yml
 
 permissions:
   contents: write
