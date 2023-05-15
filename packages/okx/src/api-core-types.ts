@@ -1,7 +1,7 @@
 /**
  * THIS IS GENERATED CODE. DO NOT EDIT.
  */
-export interface OkxResponse<Data> {
+export interface OkxResponse<Data = any> {
   code: string;
   msg: string;
   data: Data[];

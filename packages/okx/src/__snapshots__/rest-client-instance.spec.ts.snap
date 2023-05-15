@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rest-client-instance signature request get 1`] = `
+{
+  "Accept": "application/json, text/plain, */*",
+  "OK-ACCESS-KEY": "test-api-key",
+  "OK-ACCESS-PASSPHRASE": "test-passpharse",
+  "OK-ACCESS-SIGN": "EQTtq7fY3jChCxmJ/kQ6vg+ieuMkjA9scJeis6/lU18=",
+  "OK-ACCESS-TIMESTAMP": "1970-01-01T00:00:00.000Z",
+}
+`;
+
+exports[`rest-client-instance signature request get with querystring 1`] = `
+{
+  "Accept": "application/json, text/plain, */*",
+  "OK-ACCESS-KEY": "test-api-key",
+  "OK-ACCESS-PASSPHRASE": "test-passpharse",
+  "OK-ACCESS-SIGN": "PGDrFQWozEO+oyGvdvhds8u0a8Otl6gxGSKrsGSbyag=",
+  "OK-ACCESS-TIMESTAMP": "1970-01-01T00:00:00.000Z",
+}
+`;
+
+exports[`rest-client-instance signature request post 1`] = `
+{
+  "Accept": "application/json, text/plain, */*",
+  "Content-Type": "application/json",
+  "OK-ACCESS-KEY": "test-api-key",
+  "OK-ACCESS-PASSPHRASE": "test-passpharse",
+  "OK-ACCESS-SIGN": "XzYey6LLdxDdYVRXLuqchBjsLE2SLD5rCWqJXetHpD0=",
+  "OK-ACCESS-TIMESTAMP": "1970-01-01T00:00:00.000Z",
+}
+`;
